@@ -1,0 +1,13 @@
+# Core
+numpy==2.4.2
+pandas==3.0.0
+scikit-learn==1.8.0
+joblib==1.5.3
+python-dateutil==2.9.0.post0
+
+# Orchestration (Dagster)
+dagster==1.12.14
+dagster-webserver==1.12.14
+
+# Optional (recommended for quick checks)
+pytest==8.3.4

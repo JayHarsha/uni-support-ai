@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: uni_support_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: uni_support_ai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "@Qwerty7"
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db_init.sql:/docker-entrypoint-initdb.d/db_init.sql
+
+volumes:
+  postgres_data:
