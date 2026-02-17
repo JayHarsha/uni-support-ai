@@ -1,0 +1,66 @@
+{
+  "n_predictions": 200,
+  "category_accuracy": 0.92,
+  "precision_macro": 0.9151260303763724,
+  "recall_macro": 0.9246075276680805,
+  "f1_macro": 0.9178229354297791,
+  "avg_confidence": 0.7253055316303098,
+  "labels": [
+    "Exams",
+    "Fees",
+    "General",
+    "IT",
+    "Timetable"
+  ],
+  "category_classification_report": {
+    "Exams": {
+      "precision": 0.8235294117647058,
+      "recall": 1.0,
+      "f1-score": 0.9032258064516129,
+      "support": 28.0
+    },
+    "Fees": {
+      "precision": 0.9534883720930233,
+      "recall": 0.9534883720930233,
+      "f1-score": 0.9534883720930233,
+      "support": 43.0
+    },
+    "General": {
+      "precision": 0.8974358974358975,
+      "recall": 0.875,
+      "f1-score": 0.8860759493670886,
+      "support": 40.0
+    },
+    "IT": {
+      "precision": 0.96,
+      "recall": 0.9056603773584906,
+      "f1-score": 0.9320388349514563,
+      "support": 53.0
+    },
+    "Timetable": {
+      "precision": 0.9411764705882353,
+      "recall": 0.8888888888888888,
+      "f1-score": 0.9142857142857143,
+      "support": 36.0
+    },
+    "accuracy": 0.92,
+    "macro avg": {
+      "precision": 0.9151260303763724,
+      "recall": 0.9246075276680805,
+      "f1-score": 0.9178229354297791,
+      "support": 200.0
+    },
+    "weighted avg": {
+      "precision": 0.9235930618401207,
+      "recall": 0.92,
+      "f1-score": 0.9202285226102078,
+      "support": 200.0
+    }
+  },
+  "artifacts": {
+    "metrics_json": "outputs/metrics.json",
+    "confusion_matrix_csv": "outputs/confusion_matrix.csv",
+    "high_priority_per_day_csv": "outputs/high_priority_per_day.csv",
+    "drift_csv": "outputs/drift_confidence_over_time.csv"
+  }
+}

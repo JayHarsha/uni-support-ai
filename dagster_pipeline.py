@@ -1,4 +1,3 @@
-# Nani
 from dagster import asset, Definitions
 
 from src.data_generation import generate_and_store_tickets

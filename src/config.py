@@ -1,4 +1,4 @@
-# src/config.py
+# Watashi
 import os
 
 # -------------------------

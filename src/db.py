@@ -1,4 +1,4 @@
-# src/db.py
+# Watashi
 
 import psycopg2
 from psycopg2.extras import RealDictCursor, Json
@@ -59,6 +59,21 @@ def insert_ticket(ticket_id, text, true_category, true_priority, created_at):
             (ticket_id, text, true_category, true_priority, created_at),
         )
 
+def insert_incoming_ticket(ticket_id, text, created_at):
+    """
+    Insert a real incoming ticket (no true labels available).
+    We store true_category/true_priority as 'Unknown'.
+    """
+    with get_cursor() as cur:
+        cur.execute(
+            """
+            INSERT INTO public.tickets
+            (ticket_id, text, true_category, true_priority, created_at)
+            VALUES (%s, %s, %s, %s, %s)
+            ON CONFLICT (ticket_id) DO NOTHING;
+            """,
+            (ticket_id, text, "Unknown", "Unknown", created_at),
+        )
 
 def fetch_all_tickets():
     with get_cursor() as cur:
@@ -118,3 +133,29 @@ def insert_metrics(category_accuracy, precision_macro, recall_macro, f1_macro, a
             """,
             (category_accuracy, precision_macro, recall_macro, f1_macro, avg_confidence),
         )
+
+# --------------------------------------------------
+# High Urgency Tickets
+# --------------------------------------------------
+def fetch_unclassified_tickets(limit=200):
+    """
+    Fetch tickets not yet classified.
+    """
+    limit = int(limit)
+
+    with get_cursor() as cur:
+        cur.execute(
+            f"""
+            SELECT t.*
+            FROM public.tickets t
+            LEFT JOIN public.predictions p
+                ON t.ticket_id = p.ticket_id
+            WHERE p.ticket_id IS NULL
+            ORDER BY t.created_at DESC
+            LIMIT {limit};
+            """
+        )
+        return cur.fetchall()
+
+
+

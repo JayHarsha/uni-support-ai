@@ -1,0 +1,201 @@
+ticket_id,text,true_category,true_priority,pred_category,pred_priority,confidence,created_at,processed_at
+a0a5bbec,I need a receipt for my fee payment. It worked yesterday but not today. Fees deadline is tomorrow.,Fees,High,Fees,High,0.726282,2026-02-02 02:04:58.398846+00:00,2026-02-16T20:57:08.776258+00:00
+e5099d1d,I can't access Moodle.,IT,Medium,IT,Medium,0.853171,2026-02-02 02:23:58.398846+00:00,2026-02-16T20:57:10.732014+00:00
+41ac4620,The billing page is not loading when I try to pay.,Fees,Low,Fees,Low,0.718283,2026-02-02 02:40:58.398846+00:00,2026-02-16T20:57:10.214558+00:00
+40ebff84,I need a receipt for my fee payment.,Fees,Low,Fees,Low,0.761851,2026-02-02 03:53:58.398846+00:00,2026-02-16T20:57:10.281014+00:00
+6e035d84,My exam timetable seems incorrect.,Exams,Low,Exams,Low,0.688338,2026-02-02 05:08:58.398846+00:00,2026-02-16T20:57:10.612890+00:00
+c481d981,I need help with enrollment.,General,Low,General,Low,0.781693,2026-02-02 05:46:58.398846+00:00,2026-02-16T20:57:11.204868+00:00
+fa689f95,I can't access Moodle.,IT,Medium,IT,Medium,0.853171,2026-02-02 06:01:58.398846+00:00,2026-02-16T20:57:08.793636+00:00
+1126905a,Wrong module is assigned in my timetable. I tried multiple times but it still fails. My exam is tomorrow.,Timetable,High,Timetable,High,0.621977,2026-02-02 09:08:58.398846+00:00,2026-02-16T20:57:09.708902+00:00
+26227ccf,I need guidance about attendance rules. It worked yesterday but not today. Enrollment deadline is today.,General,High,General,High,0.62755,2026-02-02 09:24:58.398846+00:00,2026-02-16T20:57:10.098729+00:00
+5be405d6,I can't access Moodle. I need help as soon as possible.,IT,Medium,IT,Medium,0.658253,2026-02-02 09:58:58.398846+00:00,2026-02-16T20:57:10.237551+00:00
+9b7c17b6,I submitted a request last week and got no update.,General,Low,General,Low,0.700587,2026-02-02 13:33:58.398846+00:00,2026-02-16T20:57:10.883811+00:00
+76217cf1,I need a receipt for my fee payment. My exam is tomorrow.,Fees,High,Fees,High,0.797117,2026-02-02 14:30:58.398846+00:00,2026-02-16T20:57:09.753839+00:00
+f803c2b4,My timetable shows overlapping classes. I tried multiple times but it still fails.,Timetable,Low,Timetable,Low,0.731031,2026-02-02 15:27:58.398846+00:00,2026-02-16T20:57:09.416876+00:00
+52cfb56d,I was charged twice for tuition. The portal is showing an error.,Fees,Medium,Fees,Medium,0.794088,2026-02-02 17:31:58.398846+00:00,2026-02-16T20:57:10.782884+00:00
+2babb048,My transaction was declined. I am getting a timeout message. My exam is tomorrow.,Fees,High,Fees,High,0.610336,2026-02-02 18:30:58.398846+00:00,2026-02-16T20:57:10.856290+00:00
+4919b250,I was charged twice for tuition. The portal is showing an error.,Fees,Medium,Fees,Medium,0.794088,2026-02-02 19:31:58.398846+00:00,2026-02-16T20:57:09.576896+00:00
+09c10f4d,Password reset is not working.,IT,Medium,IT,Medium,0.849581,2026-02-02 21:29:58.398846+00:00,2026-02-16T20:57:10.952448+00:00
+8c0308b7,Wrong module is assigned in my timetable. The portal is showing an error.,Timetable,Medium,Timetable,Medium,0.733126,2026-02-02 23:03:58.398846+00:00,2026-02-16T20:57:08.764610+00:00
+edcc5029,The billing page is not loading when I try to pay. It worked yesterday but not today. Enrollment deadline is today.,Fees,High,Fees,High,0.637228,2026-02-02 23:57:58.398846+00:00,2026-02-16T20:57:10.039610+00:00
+f3738ce1,I need exam accommodation support.,Exams,Low,Exams,Low,0.759875,2026-02-03 03:04:58.398846+00:00,2026-02-16T20:57:09.635887+00:00
+33b9c73f,I missed my exam due to illness. It worked yesterday but not today.,Exams,Low,Exams,Low,0.680304,2026-02-03 03:15:58.398846+00:00,2026-02-16T20:57:09.815690+00:00
+cb5e6f81,I need exam accommodation support. I need help as soon as possible.,Exams,Low,Exams,Low,0.699005,2026-02-03 06:07:58.398846+00:00,2026-02-16T20:57:09.137521+00:00
+2cbef290,The billing page is not loading when I try to pay. The portal is showing an error. Fees deadline is tomorrow.,Fees,High,Fees,High,0.770362,2026-02-03 08:30:58.398846+00:00,2026-02-16T20:57:11.224792+00:00
+122b888d,I need guidance about attendance rules.,General,Low,General,Low,0.69698,2026-02-03 13:32:58.398846+00:00,2026-02-16T20:57:09.230408+00:00
+dc0c5266,I can't access Moodle. I tried multiple times but it still fails.,IT,Medium,IT,Medium,0.659979,2026-02-03 13:38:58.398846+00:00,2026-02-16T20:57:09.504365+00:00
+b9071286,My transaction was declined. I am getting a timeout message.,Fees,Medium,Fees,Medium,0.839777,2026-02-03 14:45:58.398846+00:00,2026-02-16T20:57:08.926431+00:00
+2b7ddbc8,I need help with enrollment. This is urgent due to a deadline.,General,High,General,High,0.792959,2026-02-03 15:40:58.398846+00:00,2026-02-16T20:57:09.069034+00:00
+bb22e854,I need guidance about attendance rules. This is urgent due to a deadline. Enrollment deadline is today.,IT,High,General,High,0.7541,2026-02-03 20:55:58.398846+00:00,2026-02-16T20:57:09.488407+00:00
+ba5a85a4,My university login is not working.,IT,Medium,IT,Medium,0.734933,2026-02-03 21:44:58.398846+00:00,2026-02-16T20:57:09.804775+00:00
+c82a765a,Wrong module is assigned in my timetable. I tried multiple times but it still fails.,Timetable,Low,Timetable,Low,0.778681,2026-02-03 22:11:58.398846+00:00,2026-02-16T20:57:11.046372+00:00
+56b42503,Moodle page is not loading for my course. I tried multiple times but it still fails. Enrollment deadline is today.,IT,High,IT,High,0.674977,2026-02-03 22:26:58.398846+00:00,2026-02-16T20:57:09.550683+00:00
+e9e7b228,I have an issue with my ID card. I need help as soon as possible.,General,Low,General,Low,0.686955,2026-02-04 05:11:58.398846+00:00,2026-02-16T20:57:11.339848+00:00
+94747d68,I can't access Moodle. It worked yesterday but not today.,IT,Medium,IT,Medium,0.666937,2026-02-04 06:30:58.398846+00:00,2026-02-16T20:57:11.097681+00:00
+a4cce30d,My transaction was declined. This is urgent due to a deadline.,Fees,High,Fees,High,0.729223,2026-02-04 07:11:58.398846+00:00,2026-02-16T20:57:09.651890+00:00
+b8651015,The billing page is not loading when I try to pay. I tried multiple times but it still fails. My class starts today.,Fees,Low,Fees,Low,0.70691,2026-02-04 09:28:58.398846+00:00,2026-02-16T20:57:09.058157+00:00
+3f7df149,Who should I contact for student services? The portal is showing an error.,General,Medium,General,Medium,0.688086,2026-02-04 10:55:58.398846+00:00,2026-02-16T20:57:10.382201+00:00
+fadbe015,I need an exam deferral.,Exams,Low,Exams,Low,0.717753,2026-02-04 14:09:58.398846+00:00,2026-02-16T20:57:09.280117+00:00
+4bc1531f,The billing page is not loading when I try to pay. Fees deadline is tomorrow.,Fees,High,Fees,High,0.797865,2026-02-04 18:33:58.398846+00:00,2026-02-16T20:57:11.241156+00:00
+3f273081,I was charged twice for tuition. The portal is showing an error. My exam is tomorrow.,Fees,High,Fees,High,0.72657,2026-02-04 22:21:58.398846+00:00,2026-02-16T20:57:10.249635+00:00
+583ae1ad,Password reset is not working. The portal is showing an error.,IT,Medium,IT,Medium,0.848625,2026-02-04 23:19:58.398846+00:00,2026-02-16T20:57:09.743581+00:00
+d8df57d3,My transaction was declined. Fees deadline is tomorrow.,IT,High,Fees,High,0.831513,2026-02-04 23:33:58.398846+00:00,2026-02-16T20:57:09.383953+00:00
+16505b81,I need a receipt for my fee payment. My exam is tomorrow.,Fees,High,Fees,High,0.797117,2026-02-05 01:22:58.398846+00:00,2026-02-16T20:57:09.920926+00:00
+16dc6e1a,I have an issue with my ID card.,General,Low,General,Low,0.731647,2026-02-05 02:05:58.398846+00:00,2026-02-16T20:57:09.863535+00:00
+2199fc95,I get invalid credentials when logging in. I need help as soon as possible. My exam is tomorrow.,IT,High,IT,High,0.630909,2026-02-05 02:16:58.398846+00:00,2026-02-16T20:57:09.940317+00:00
+a56381ef,I was charged twice for tuition. I need help as soon as possible.,Fees,Low,Fees,Low,0.68614,2026-02-05 03:15:58.398846+00:00,2026-02-16T20:57:10.719041+00:00
+22d36994,I need guidance about attendance rules. The portal is showing an error. Fees deadline is tomorrow.,General,High,General,High,0.696504,2026-02-05 03:20:58.398846+00:00,2026-02-16T20:57:09.985700+00:00
+aaf23612,I need a receipt for my fee payment. I tried multiple times but it still fails.,Fees,Low,Fees,Low,0.707552,2026-02-05 03:26:58.398846+00:00,2026-02-16T20:57:10.574875+00:00
+e7ef663e,My payment failed on the fee portal. My class starts today.,Fees,Medium,Fees,Medium,0.771775,2026-02-05 04:37:58.398846+00:00,2026-02-16T20:57:10.166339+00:00
+1c909683,I need a receipt for my fee payment. I need help as soon as possible.,Fees,Low,Fees,Low,0.673501,2026-02-05 06:13:58.398846+00:00,2026-02-16T20:57:10.125343+00:00
+d158428a,I was charged twice for tuition. The portal is showing an error. Fees deadline is tomorrow.,Fees,High,Fees,High,0.768801,2026-02-05 08:21:58.398846+00:00,2026-02-16T20:57:10.686988+00:00
+2a9af17c,Moodle page is not loading for my course. This is urgent due to a deadline. Fees deadline is tomorrow.,IT,High,IT,High,0.812879,2026-02-05 11:00:58.398846+00:00,2026-02-16T20:57:09.725738+00:00
+cba405c3,My exam venue is not displayed. I need help as soon as possible.,Exams,Low,Exams,Low,0.690878,2026-02-05 11:43:58.398846+00:00,2026-02-16T20:57:11.148647+00:00
+e4072c99,My timetable is missing lab sessions. The portal is showing an error. Fees deadline is tomorrow.,Timetable,High,Timetable,High,0.715407,2026-02-05 14:55:58.398846+00:00,2026-02-16T20:57:09.771962+00:00
+f39605d2,I need help with enrollment. It worked yesterday but not today.,General,Low,General,Low,0.684188,2026-02-05 15:36:58.398846+00:00,2026-02-16T20:57:09.668638+00:00
+1dcf14af,I need exam accommodation support. I tried multiple times but it still fails.,Timetable,Low,Exams,Low,0.703814,2026-02-05 17:16:58.398846+00:00,2026-02-16T20:57:10.706688+00:00
+0809bbe6,My transaction was declined.,Fees,Medium,Fees,Medium,0.740241,2026-02-05 23:28:58.398846+00:00,2026-02-16T20:57:10.270190+00:00
+330927d1,I need an exam deferral. My class starts today.,General,Low,Exams,Low,0.663219,2026-02-06 01:22:58.398846+00:00,2026-02-16T20:57:09.616541+00:00
+8ad91a54,I can't access Moodle.,IT,Medium,IT,Medium,0.853171,2026-02-06 05:36:58.398846+00:00,2026-02-16T20:57:09.957122+00:00
+3a6f7887,Who should I contact for student services? It worked yesterday but not today.,General,Low,General,Low,0.75983,2026-02-06 05:48:58.398846+00:00,2026-02-16T20:57:09.337095+00:00
+ff20703c,I need to change my tutorial group. I tried multiple times but it still fails.,Timetable,Low,Timetable,Low,0.82411,2026-02-06 07:45:58.398846+00:00,2026-02-16T20:57:09.365490+00:00
+ef2d6fd2,My university login is not working. I need help as soon as possible.,IT,Medium,IT,Medium,0.653974,2026-02-06 08:26:58.398846+00:00,2026-02-16T20:57:10.088757+00:00
+93991497,My exam venue is not displayed. This is urgent due to a deadline.,Exams,High,Exams,High,0.781165,2026-02-06 12:26:58.398846+00:00,2026-02-16T20:57:10.548827+00:00
+76d038b1,I need exam accommodation support. This is urgent due to a deadline. My class starts today.,Exams,High,Exams,High,0.646998,2026-02-06 15:16:58.398846+00:00,2026-02-16T20:57:09.261775+00:00
+85fb45b0,I need exam accommodation support. I tried multiple times but it still fails.,Timetable,Low,Exams,Low,0.703814,2026-02-06 15:38:58.398846+00:00,2026-02-16T20:57:10.745710+00:00
+9d4eb525,My exam venue is not displayed. My class starts today.,Exams,Low,Exams,Low,0.691548,2026-02-06 16:29:58.398846+00:00,2026-02-16T20:57:10.391793+00:00
+bf806b06,The timetable page is not loading.,General,Low,Timetable,Low,0.595287,2026-02-06 17:33:58.398846+00:00,2026-02-16T20:57:09.047749+00:00
+9f3630a9,I need a receipt for my fee payment. The portal is showing an error.,Fees,Medium,Fees,Medium,0.728768,2026-02-06 22:12:58.398846+00:00,2026-02-16T20:57:09.522929+00:00
+b636eadf,I need a receipt for my fee payment. It worked yesterday but not today.,Fees,Low,Fees,Low,0.74785,2026-02-06 22:18:58.398846+00:00,2026-02-16T20:57:10.793477+00:00
+b2f2d308,I need a receipt for my fee payment.,Fees,Low,Fees,Low,0.761851,2026-02-06 22:47:58.398846+00:00,2026-02-16T20:57:09.240832+00:00
+73e67fec,I missed my exam due to illness. I need help as soon as possible.,Exams,Low,Exams,Low,0.714027,2026-02-06 23:05:58.398846+00:00,2026-02-16T20:57:09.356578+00:00
+764297ab,My timetable is missing lab sessions. This is urgent due to a deadline. My class starts today.,Timetable,High,Timetable,High,0.649772,2026-02-06 23:38:58.398846+00:00,2026-02-16T20:57:10.438986+00:00
+e663b35e,I need help with enrollment.,General,Low,General,Low,0.781693,2026-02-07 00:19:58.398846+00:00,2026-02-16T20:57:09.220565+00:00
+36038b1c,Moodle page is not loading for my course. I tried multiple times but it still fails.,IT,Low,IT,Low,0.708309,2026-02-07 01:21:58.398846+00:00,2026-02-16T20:57:10.076717+00:00
+a78bb720,Moodle page is not loading for my course.,IT,Low,IT,Low,0.673095,2026-02-07 04:01:58.398846+00:00,2026-02-16T20:57:08.916527+00:00
+d7d288c7,My exam venue is not displayed. My class starts today.,Exams,Low,Exams,Low,0.691548,2026-02-07 08:40:58.398846+00:00,2026-02-16T20:57:10.371531+00:00
+523b49d2,My university login is not working. This is urgent due to a deadline. My exam is tomorrow.,IT,High,IT,High,0.799806,2026-02-07 08:47:58.398846+00:00,2026-02-16T20:57:11.131322+00:00
+53aad179,I submitted a request last week and got no update. I need help as soon as possible. Enrollment deadline is today.,General,High,General,High,0.640779,2026-02-07 11:23:58.398846+00:00,2026-02-16T20:57:09.309385+00:00
+77cd6ef2,Who should I contact for student services? I tried multiple times but it still fails.,General,Low,General,Low,0.712016,2026-02-07 11:46:58.398846+00:00,2026-02-16T20:57:09.127348+00:00
+d29235ac,Who should I contact for student services? I need help as soon as possible.,General,Low,General,Low,0.734618,2026-02-07 17:22:58.398846+00:00,2026-02-16T20:57:10.873566+00:00
+5fb1b610,I need exam accommodation support. My class starts today.,Exams,Low,Exams,Low,0.706299,2026-02-07 18:40:58.398846+00:00,2026-02-16T20:57:10.204428+00:00
+ad1bf52f,Who should I contact for student services? I am getting a timeout message. My class starts today.,General,Medium,General,Medium,0.664456,2026-02-07 19:02:58.398846+00:00,2026-02-16T20:57:09.700440+00:00
+7c00fb3a,My timetable shows overlapping classes. I am getting a timeout message. Enrollment deadline is today.,Timetable,High,Timetable,High,0.647847,2026-02-07 20:40:58.398846+00:00,2026-02-16T20:57:09.883708+00:00
+fb4fc82c,Password reset is not working. I need help as soon as possible. My class starts today.,IT,Medium,IT,Medium,0.690331,2026-02-07 21:10:58.398846+00:00,2026-02-16T20:57:10.677228+00:00
+f5281e83,I can't access Moodle. The portal is showing an error.,IT,Medium,IT,Medium,0.796262,2026-02-07 22:29:58.398846+00:00,2026-02-16T20:57:11.121335+00:00
+9bc87e04,Wrong module is assigned in my timetable. The portal is showing an error.,Timetable,Medium,Timetable,Medium,0.733126,2026-02-08 00:40:58.398846+00:00,2026-02-16T20:57:08.843656+00:00
+5a2d8501,The timetable page is not loading. Enrollment deadline is today.,Timetable,High,Timetable,High,0.74754,2026-02-08 03:56:58.398846+00:00,2026-02-16T20:57:10.057877+00:00
+e45b2656,I submitted a request last week and got no update. The portal is showing an error.,General,Medium,General,Medium,0.631661,2026-02-08 06:32:58.398846+00:00,2026-02-16T20:57:08.965804+00:00
+622954bd,My payment failed on the fee portal.,Fees,Medium,Fees,Medium,0.813539,2026-02-08 07:03:58.398846+00:00,2026-02-16T20:57:08.721528+00:00
+9315b2da,I missed my exam due to illness. The portal is showing an error. My exam is tomorrow.,Timetable,High,Exams,High,0.663054,2026-02-08 07:59:58.398846+00:00,2026-02-16T20:57:09.290756+00:00
+9acf2fd9,The timetable page is not loading. The portal is showing an error. My class starts today.,Timetable,Medium,Timetable,Medium,0.610065,2026-02-08 08:33:58.398846+00:00,2026-02-16T20:57:10.642332+00:00
+bc73b1ee,Password reset is not working. It worked yesterday but not today.,IT,Medium,IT,Medium,0.686095,2026-02-08 09:49:58.398846+00:00,2026-02-16T20:57:09.327602+00:00
+9a897ff5,Password reset is not working. I am getting a timeout message. Fees deadline is tomorrow.,IT,High,IT,High,0.721627,2026-02-08 11:14:58.398846+00:00,2026-02-16T20:57:09.597398+00:00
+ca6f8417,I need exam accommodation support. I am getting a timeout message.,Exams,Medium,Exams,Medium,0.719766,2026-02-08 14:46:58.398846+00:00,2026-02-16T20:57:11.036310+00:00
+bd64a090,My university login is not working. I am getting a timeout message.,IT,Medium,IT,Medium,0.792231,2026-02-08 15:19:58.398846+00:00,2026-02-16T20:57:09.587648+00:00
+d4f5ef1b,My exam venue is not displayed. Fees deadline is tomorrow.,Exams,High,Exams,High,0.799752,2026-02-08 19:18:58.398846+00:00,2026-02-16T20:57:10.652143+00:00
+ce8b5bb2,My university login is not working. I tried multiple times but it still fails. Fees deadline is tomorrow.,IT,High,IT,High,0.713709,2026-02-08 19:27:58.398846+00:00,2026-02-16T20:57:11.268540+00:00
+ccd781bc,I need guidance about attendance rules. I need help as soon as possible. My exam is tomorrow.,General,High,General,High,0.593305,2026-02-08 20:15:58.398846+00:00,2026-02-16T20:57:11.004939+00:00
+c84d8e2c,I missed my exam due to illness. The portal is showing an error.,Exams,Medium,Exams,Medium,0.569606,2026-02-08 20:55:58.398846+00:00,2026-02-16T20:57:10.361617+00:00
+3d6d70eb,I need an exam deferral. This is urgent due to a deadline.,General,High,Exams,High,0.692564,2026-02-08 20:55:58.398846+00:00,2026-02-16T20:57:11.076154+00:00
+10b3a67f,I get invalid credentials when logging in. It worked yesterday but not today.,IT,Low,IT,Low,0.702581,2026-02-08 22:30:58.398846+00:00,2026-02-16T20:57:09.399584+00:00
+0208e55f,My timetable is missing lab sessions. It worked yesterday but not today.,Timetable,Low,Timetable,Low,0.716522,2026-02-08 22:54:58.398846+00:00,2026-02-16T20:57:10.192416+00:00
+b837aef4,Moodle page is not loading for my course. The portal is showing an error. My class starts today.,IT,Medium,IT,Medium,0.592976,2026-02-09 02:27:58.398846+00:00,2026-02-16T20:57:09.873524+00:00
+59b2fd97,My payment failed on the fee portal.,Fees,Medium,Fees,Medium,0.813539,2026-02-09 02:29:58.398846+00:00,2026-02-16T20:57:10.348727+00:00
+4ae0b7ce,I can't access Moodle. I tried multiple times but it still fails.,Timetable,Medium,IT,Medium,0.659979,2026-02-09 04:28:58.398846+00:00,2026-02-16T20:57:10.623081+00:00
+abfd602c,Wrong module is assigned in my timetable. My class starts today.,Timetable,Low,Timetable,Low,0.757456,2026-02-09 07:38:58.398846+00:00,2026-02-16T20:57:11.216062+00:00
+59259a8e,I need to change my tutorial group.,Timetable,Low,Timetable,Low,0.838995,2026-02-09 09:32:58.398846+00:00,2026-02-16T20:57:09.532470+00:00
+53e901aa,Password reset is not working.,IT,Medium,IT,Medium,0.849581,2026-02-09 13:43:58.398846+00:00,2026-02-16T20:57:10.115800+00:00
+2eb46409,Password reset is not working. I need help as soon as possible. Enrollment deadline is today.,IT,High,IT,High,0.705593,2026-02-09 16:20:58.398846+00:00,2026-02-16T20:57:08.890853+00:00
+bf09daa7,My university login is not working. This is urgent due to a deadline.,IT,High,IT,High,0.781129,2026-02-09 17:58:58.398846+00:00,2026-02-16T20:57:10.176107+00:00
+51232b4b,I can't access Moodle. I am getting a timeout message.,IT,Medium,IT,Medium,0.830742,2026-02-09 22:00:58.398846+00:00,2026-02-16T20:57:10.302473+00:00
+167ad834,Password reset is not working. Fees deadline is tomorrow.,IT,High,IT,High,0.860847,2026-02-09 22:10:58.398846+00:00,2026-02-16T20:57:09.444937+00:00
+f3209876,I need an exam deferral. I tried multiple times but it still fails. Fees deadline is tomorrow.,Exams,High,Exams,High,0.584973,2026-02-09 22:31:58.398846+00:00,2026-02-16T20:57:10.904820+00:00
+e9f4c416,Password reset is not working.,IT,Medium,IT,Medium,0.849581,2026-02-09 23:14:58.398846+00:00,2026-02-16T20:57:10.292490+00:00
+f6dcc792,Password reset is not working. I tried multiple times but it still fails.,IT,Medium,IT,Medium,0.693052,2026-02-09 23:23:58.398846+00:00,2026-02-16T20:57:10.490399+00:00
+07c5f262,I can't access Moodle. I tried multiple times but it still fails.,IT,Medium,IT,Medium,0.659979,2026-02-10 00:01:58.398846+00:00,2026-02-16T20:57:08.804846+00:00
+8fc4d706,Wrong module is assigned in my timetable. I need help as soon as possible. Enrollment deadline is today.,Timetable,High,Timetable,High,0.703047,2026-02-10 00:06:58.398846+00:00,2026-02-16T20:57:10.313203+00:00
+df19fe53,My timetable is missing lab sessions.,Timetable,Low,Timetable,Low,0.69719,2026-02-10 01:11:58.398846+00:00,2026-02-16T20:57:10.632521+00:00
+4558f80e,My university login is not working. I tried multiple times but it still fails.,IT,Medium,IT,Medium,0.618302,2026-02-10 01:22:58.398846+00:00,2026-02-16T20:57:09.567139+00:00
+09671e91,My university login is not working. I tried multiple times but it still fails. Enrollment deadline is today.,IT,High,IT,High,0.69537,2026-02-10 04:00:58.398846+00:00,2026-02-16T20:57:10.412997+00:00
+de602569,The timetable page is not loading. This is urgent due to a deadline.,Timetable,High,Timetable,High,0.680389,2026-02-10 04:54:58.398846+00:00,2026-02-16T20:57:10.838434+00:00
+bede8ad5,My timetable shows overlapping classes. It worked yesterday but not today.,Timetable,Low,Timetable,Low,0.718007,2026-02-10 11:58:58.398846+00:00,2026-02-16T20:57:09.680940+00:00
+d4fe55de,Who should I contact for student services? The portal is showing an error. My exam is tomorrow.,General,High,General,High,0.671107,2026-02-10 12:41:58.398846+00:00,2026-02-16T20:57:09.190493+00:00
+522e96b3,I was charged twice for tuition. The portal is showing an error.,Fees,Medium,Fees,Medium,0.794088,2026-02-10 12:44:58.398846+00:00,2026-02-16T20:57:09.966158+00:00
+6e2e61fa,I can't access Moodle. The portal is showing an error.,IT,Medium,IT,Medium,0.796262,2026-02-10 13:01:58.398846+00:00,2026-02-16T20:57:10.564835+00:00
+16a74a6c,Who should I contact for student services? The portal is showing an error.,IT,Medium,General,Medium,0.688086,2026-02-10 13:31:58.398846+00:00,2026-02-16T20:57:11.284391+00:00
+5595c0d5,Moodle page is not loading for my course. I tried multiple times but it still fails. My class starts today.,IT,Low,IT,Low,0.68699,2026-02-10 13:53:58.398846+00:00,2026-02-16T20:57:10.227632+00:00
+24c8de37,I need help with enrollment. I tried multiple times but it still fails.,General,Low,General,Low,0.602688,2026-02-10 17:24:58.398846+00:00,2026-02-16T20:57:10.667767+00:00
+b7efde50,I need exam accommodation support. I am getting a timeout message.,Exams,Medium,Exams,Medium,0.719766,2026-02-10 17:52:58.398846+00:00,2026-02-16T20:57:11.318246+00:00
+9e40c3b5,Password reset is not working. I am getting a timeout message.,IT,Medium,IT,Medium,0.870194,2026-02-10 17:56:58.398846+00:00,2026-02-16T20:57:09.207433+00:00
+c4c018ad,My university login is not working. This is urgent due to a deadline.,IT,High,IT,High,0.781129,2026-02-10 20:07:58.398846+00:00,2026-02-16T20:57:10.500897+00:00
+8409264c,I was charged twice for tuition. I am getting a timeout message. My class starts today.,Fees,Medium,Fees,Medium,0.744508,2026-02-10 21:56:58.398846+00:00,2026-02-16T20:57:10.923803+00:00
+ff1e28ab,My transaction was declined. The portal is showing an error.,Fees,Medium,Fees,Medium,0.853617,2026-02-10 23:24:58.398846+00:00,2026-02-16T20:57:10.428765+00:00
+7f3e4d5a,I get invalid credentials when logging in. It worked yesterday but not today.,IT,Low,IT,Low,0.702581,2026-02-11 00:36:58.398846+00:00,2026-02-16T20:57:10.935949+00:00
+756bd4f6,I missed my exam due to illness. I tried multiple times but it still fails. Fees deadline is tomorrow.,Exams,High,Exams,High,0.649171,2026-02-11 01:34:58.398846+00:00,2026-02-16T20:57:09.462045+00:00
+2ee0837a,I get invalid credentials when logging in. I need help as soon as possible. Fees deadline is tomorrow.,IT,High,IT,High,0.721575,2026-02-11 02:36:58.398846+00:00,2026-02-16T20:57:09.100738+00:00
+74d7d289,Who should I contact for student services? I tried multiple times but it still fails.,General,Low,General,Low,0.712016,2026-02-11 04:16:58.398846+00:00,2026-02-16T20:57:09.148016+00:00
+9506c89a,The timetable page is not loading. Enrollment deadline is today.,Timetable,High,Timetable,High,0.74754,2026-02-11 06:48:58.398846+00:00,2026-02-16T20:57:11.177731+00:00
+14067291,I need to change my tutorial group. It worked yesterday but not today.,Timetable,Low,Timetable,Low,0.807783,2026-02-11 08:05:58.398846+00:00,2026-02-16T20:57:09.826490+00:00
+ff631824,I was charged twice for tuition.,Fees,Low,Fees,Low,0.753464,2026-02-11 08:46:58.398846+00:00,2026-02-16T20:57:10.402654+00:00
+6144eab7,My exam venue is not displayed. I need help as soon as possible.,Exams,Low,Exams,Low,0.690878,2026-02-11 09:49:58.398846+00:00,2026-02-16T20:57:10.518644+00:00
+775a100a,Password reset is not working. Fees deadline is tomorrow.,IT,High,IT,High,0.860847,2026-02-11 10:37:58.398846+00:00,2026-02-16T20:57:10.022183+00:00
+b5930ce7,Password reset is not working. My class starts today.,IT,Medium,IT,Medium,0.786066,2026-02-11 11:13:58.398846+00:00,2026-02-16T20:57:10.968134+00:00
+803b7e08,I have an issue with my ID card. It worked yesterday but not today. My exam is tomorrow.,General,High,General,High,0.526201,2026-02-11 12:01:58.398846+00:00,2026-02-16T20:57:09.174222+00:00
+c9df4781,I submitted a request last week and got no update. This is urgent due to a deadline.,General,High,General,High,0.763562,2026-02-11 15:48:58.398846+00:00,2026-02-16T20:57:10.455648+00:00
+0b99c21b,Password reset is not working. I need help as soon as possible.,IT,Medium,IT,Medium,0.731206,2026-02-11 17:56:58.398846+00:00,2026-02-16T20:57:10.146680+00:00
+006f15d0,I need help with enrollment. The portal is showing an error.,General,Medium,General,Medium,0.688755,2026-02-11 23:50:58.398846+00:00,2026-02-16T20:57:08.833184+00:00
+7fbe1f75,I need to change my tutorial group.,General,Low,Timetable,Low,0.838995,2026-02-12 01:29:58.398846+00:00,2026-02-16T20:57:09.251947+00:00
+c5c7e9f9,I need to change my tutorial group. The portal is showing an error. My class starts today.,Timetable,Medium,Timetable,Medium,0.698394,2026-02-12 03:15:58.398846+00:00,2026-02-16T20:57:10.817807+00:00
+0de0e389,I need a receipt for my fee payment. My exam is tomorrow.,Fees,High,Fees,High,0.797117,2026-02-12 05:01:58.398846+00:00,2026-02-16T20:57:11.020362+00:00
+6e0f0859,The billing page is not loading when I try to pay.,Fees,Low,Fees,Low,0.718283,2026-02-12 05:24:58.398846+00:00,2026-02-16T20:57:10.805946+00:00
+d77a011d,Password reset is not working.,IT,Medium,IT,Medium,0.849581,2026-02-12 08:12:58.398846+00:00,2026-02-16T20:57:10.772965+00:00
+dd0dcc83,I have an issue with my ID card. The portal is showing an error.,General,Medium,General,Medium,0.614102,2026-02-12 16:17:58.398846+00:00,2026-02-16T20:57:09.117439+00:00
+6fdce789,My exam timetable seems incorrect.,Exams,Low,Exams,Low,0.688338,2026-02-12 20:47:58.398846+00:00,2026-02-16T20:57:11.194738+00:00
+489f5641,My payment failed on the fee portal.,IT,Medium,Fees,Medium,0.813539,2026-02-12 22:12:58.398846+00:00,2026-02-16T20:57:10.893635+00:00
+2e438b58,I need to change my tutorial group. Enrollment deadline is today.,Timetable,High,Timetable,High,0.801516,2026-02-13 00:31:58.398846+00:00,2026-02-16T20:57:09.084089+00:00
+919c455c,I need exam accommodation support. The portal is showing an error.,Exams,Medium,Exams,Medium,0.659857,2026-02-13 00:45:58.398846+00:00,2026-02-16T20:57:08.946339+00:00
+63b7bd41,I need guidance about attendance rules. My exam is tomorrow.,General,High,General,High,0.759299,2026-02-13 02:53:58.398846+00:00,2026-02-16T20:57:11.293080+00:00
+53dc9783,Wrong module is assigned in my timetable. I tried multiple times but it still fails.,Timetable,Low,Timetable,Low,0.778681,2026-02-13 03:10:58.398846+00:00,2026-02-16T20:57:09.541189+00:00
+8a8f5832,My timetable is missing lab sessions. I need help as soon as possible.,Timetable,Low,Timetable,Low,0.645087,2026-02-13 05:11:58.398846+00:00,2026-02-16T20:57:09.346197+00:00
+ba5f8416,My timetable shows overlapping classes. I am getting a timeout message.,Timetable,Medium,Timetable,Medium,0.632393,2026-02-13 07:22:58.398846+00:00,2026-02-16T20:57:10.539070+00:00
+66ee788d,My timetable shows overlapping classes. My exam is tomorrow.,Timetable,High,Timetable,High,0.652959,2026-02-13 15:08:58.398846+00:00,2026-02-16T20:57:10.757081+00:00
+e89ebce5,I can't access Moodle. I am getting a timeout message.,IT,Medium,IT,Medium,0.830742,2026-02-13 16:36:58.398846+00:00,2026-02-16T20:57:10.994853+00:00
+140ae71d,The timetable page is not loading. I am getting a timeout message.,Timetable,Medium,Timetable,Medium,0.635826,2026-02-13 19:53:58.398846+00:00,2026-02-16T20:57:11.108537+00:00
+cfb8c1d2,I need to change my tutorial group. It worked yesterday but not today. Fees deadline is tomorrow.,Timetable,High,Timetable,High,0.721723,2026-02-13 20:08:58.398846+00:00,2026-02-16T20:57:09.789106+00:00
+bb9efbd2,My payment failed on the fee portal. The portal is showing an error.,Fees,Medium,Fees,Medium,0.844162,2026-02-13 23:09:58.398846+00:00,2026-02-16T20:57:08.856149+00:00
+f0c93a77,I need an exam deferral. I tried multiple times but it still fails.,Exams,Low,Exams,Low,0.708007,2026-02-14 02:53:58.398846+00:00,2026-02-16T20:57:10.528771+00:00
+37df59a3,I need a receipt for my fee payment. I am getting a timeout message. My exam is tomorrow.,Fees,High,Fees,High,0.732092,2026-02-14 03:32:58.398846+00:00,2026-02-16T20:57:10.978190+00:00
+2aaae76d,My university login is not working. I need help as soon as possible.,IT,Medium,IT,Medium,0.653974,2026-02-14 05:37:58.398846+00:00,2026-02-16T20:57:10.602364+00:00
+d445c678,I need a receipt for my fee payment. This is urgent due to a deadline. Enrollment deadline is today.,Fees,High,Fees,High,0.705396,2026-02-14 05:48:58.398846+00:00,2026-02-16T20:57:11.159591+00:00
+17510984,I need help with enrollment.,General,Low,General,Low,0.781693,2026-02-14 10:39:58.398846+00:00,2026-02-16T20:57:09.975594+00:00
+9e53815a,I need help with enrollment. This is urgent due to a deadline.,General,High,General,High,0.792959,2026-02-14 12:34:58.398846+00:00,2026-02-16T20:57:08.744916+00:00
+c867974c,I need exam accommodation support.,Exams,Low,Exams,Low,0.759875,2026-02-14 13:59:58.398846+00:00,2026-02-16T20:57:09.513762+00:00
+cbf2bee9,The timetable page is not loading. The portal is showing an error. Enrollment deadline is today.,Timetable,High,Timetable,High,0.641803,2026-02-14 15:05:58.398846+00:00,2026-02-16T20:57:09.847531+00:00
+739a66ee,My transaction was declined. I tried multiple times but it still fails. Enrollment deadline is today.,Fees,High,Fees,High,0.555571,2026-02-14 17:54:58.398846+00:00,2026-02-16T20:57:10.584744+00:00
+bc5638cd,My university login is not working.,Fees,Medium,IT,Medium,0.734933,2026-02-14 18:46:58.398846+00:00,2026-02-16T20:57:09.007829+00:00
+ed81546a,My timetable is missing lab sessions. I need help as soon as possible. Enrollment deadline is today.,Timetable,High,Timetable,High,0.645543,2026-02-14 18:48:58.398846+00:00,2026-02-16T20:57:09.426508+00:00
+73adb5e2,My exam venue is not displayed. Enrollment deadline is today.,Exams,High,Exams,High,0.789548,2026-02-14 19:56:58.398846+00:00,2026-02-16T20:57:08.986586+00:00
+ad11049f,I need exam accommodation support.,Exams,Low,Exams,Low,0.759875,2026-02-14 20:58:58.398846+00:00,2026-02-16T20:57:11.309001+00:00
+670ce274,I missed my exam due to illness. I need help as soon as possible.,Exams,Low,Exams,Low,0.714027,2026-02-14 21:25:58.398846+00:00,2026-02-16T20:57:10.136434+00:00
+2efcd9fd,I have an issue with my ID card. Fees deadline is tomorrow.,General,High,General,High,0.744663,2026-02-14 21:36:58.398846+00:00,2026-02-16T20:57:09.901894+00:00
+1c09d281,My exam timetable seems incorrect. This is urgent due to a deadline.,General,High,Exams,High,0.679487,2026-02-15 00:01:58.398846+00:00,2026-02-16T20:57:10.472337+00:00
+66e320fa,Who should I contact for student services? I need help as soon as possible. Fees deadline is tomorrow.,General,High,General,High,0.684387,2026-02-15 02:51:58.398846+00:00,2026-02-16T20:57:10.332047+00:00
+ee94d715,My exam venue is not displayed. This is urgent due to a deadline. My class starts today.,Exams,High,Exams,High,0.687149,2026-02-15 04:27:58.398846+00:00,2026-02-16T20:57:10.003965+00:00
+63676bc4,I need help with enrollment. I tried multiple times but it still fails.,IT,Low,General,Low,0.602688,2026-02-15 09:33:58.398846+00:00,2026-02-16T20:57:10.156915+00:00
+3f82a578,I have an issue with my ID card. I tried multiple times but it still fails.,Fees,Low,General,Low,0.656292,2026-02-15 11:38:58.398846+00:00,2026-02-16T20:57:11.328828+00:00
+4d03addc,I have an issue with my ID card.,General,Low,General,Low,0.731647,2026-02-15 12:21:58.398846+00:00,2026-02-16T20:57:08.975808+00:00
+5b3d1e9f,I was charged twice for tuition. It worked yesterday but not today.,Fees,Low,Fees,Low,0.740265,2026-02-15 14:28:58.398846+00:00,2026-02-16T20:57:08.906734+00:00
+981be73d,I have an issue with my ID card. Fees deadline is tomorrow.,General,High,General,High,0.744663,2026-02-15 15:34:58.398846+00:00,2026-02-16T20:57:08.868923+00:00
+eaa7560a,I need to change my tutorial group. My class starts today.,Timetable,Low,Timetable,Low,0.803487,2026-02-15 16:14:58.398846+00:00,2026-02-16T20:57:09.408371+00:00
+6c281b34,I need an exam deferral. Enrollment deadline is today.,Exams,High,Exams,High,0.731533,2026-02-15 16:17:58.398846+00:00,2026-02-16T20:57:08.815928+00:00
+c0a0abed,I was charged twice for tuition. My exam is tomorrow.,Fees,High,Fees,High,0.771684,2026-02-15 20:55:58.398846+00:00,2026-02-16T20:57:09.157884+00:00
+d76d1589,My payment failed on the fee portal. I am getting a timeout message.,Fees,Medium,Fees,Medium,0.851855,2026-02-15 22:29:58.398846+00:00,2026-02-16T20:57:09.478615+00:00
+6e4462c4,I have an issue with my ID card.,General,Low,General,Low,0.731647,2026-02-15 23:51:58.398846+00:00,2026-02-16T20:57:11.258533+00:00
+4360db8c,My transaction was declined. I am getting a timeout message.,Fees,Medium,Fees,Medium,0.839777,2026-02-16 05:33:58.398846+00:00,2026-02-16T20:57:09.030058+00:00
+f0187c81,I need guidance about attendance rules. I need help as soon as possible.,General,Low,General,Low,0.637054,2026-02-16 05:55:58.398846+00:00,2026-02-16T20:57:09.374677+00:00
+79f460ab,I need guidance about attendance rules. I am getting a timeout message. My exam is tomorrow.,General,High,General,High,0.65999,2026-02-16 08:31:58.398846+00:00,2026-02-16T20:57:11.056048+00:00
+13235f9f,My university login is not working. The portal is showing an error.,IT,Medium,IT,Medium,0.770386,2026-02-16 08:43:58.398846+00:00,2026-02-16T20:57:08.955675+00:00
+5b2b93b9,The billing page is not loading when I try to pay. I am getting a timeout message. My class starts today.,Fees,Medium,Fees,Medium,0.60751,2026-02-16 08:53:58.398846+00:00,2026-02-16T20:57:08.936234+00:00
+6daf3773,My timetable shows overlapping classes. It worked yesterday but not today.,Timetable,Low,Timetable,Low,0.718007,2026-02-16 13:12:58.398846+00:00,2026-02-16T20:57:09.690712+00:00
+2fa935e5,Password reset is not working.,IT,Medium,IT,Medium,0.849581,2026-02-16 20:37:58.398846+00:00,2026-02-16T20:57:09.837739+00:00
