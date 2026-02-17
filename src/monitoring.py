@@ -1,161 +1,152 @@
+# src/monitoring.py
+
+import json
 import os
-from datetime import datetime, timezone
-from typing import Any, Dict, List
+from typing import Dict, Any
 
 import pandas as pd
-from joblib import load
-from src.db import fetch_unclassified_tickets
+from sklearn.metrics import (
+    accuracy_score,
+    precision_recall_fscore_support,
+    confusion_matrix,
+    classification_report,
+)
 
 from src.config import (
     OUTPUT_DIR,
-    CATEGORY_MODEL_PATH,
-    PRIORITY_MODEL_PATH,
+    METRICS_JSON_PATH,
+    CONFUSION_MATRIX_CSV_PATH,
+    HIGH_PRIORITY_PER_DAY_CSV_PATH,
+    DRIFT_CSV_PATH,
 )
-from src.db import insert_prediction, insert_event, fetch_all_tickets
-from src.event_bus import BUS
+from src.db import fetch_all_tickets, fetch_all_predictions, insert_metrics
 
 
-EVENTS_LOG_PATH = os.path.join(OUTPUT_DIR, "events.log")
-PREDICTIONS_CSV_PATH = os.path.join(OUTPUT_DIR, "predictions.csv")
-
-
-_category_model = None
-_priority_model = None
-
-
-def _lazy_load_models():
-    global _category_model, _priority_model
-    if _category_model is None:
-        _category_model = load(CATEGORY_MODEL_PATH)
-    if _priority_model is None:
-        _priority_model = load(PRIORITY_MODEL_PATH)
-
-
-def predict_text(text: str) -> Dict[str, Any]:
+def _load_joined_data() -> pd.DataFrame:
     """
-    Predict category + priority for a single ticket text.
-    Returns predictions + confidence.
+    Join tickets (true labels + created_at) with predictions (model outputs).
+    We join on ticket_id so we can compare true vs predicted.
     """
-    _lazy_load_models()
+    tickets = pd.DataFrame(fetch_all_tickets())
+    preds = pd.DataFrame(fetch_all_predictions())
 
-    # Category prediction + confidence
-    cat_proba = _category_model.predict_proba([text])[0]
-    cat_classes = list(_category_model.classes_)
-    cat_idx = int(cat_proba.argmax())
-    pred_category = cat_classes[cat_idx]
-    cat_conf = float(cat_proba[cat_idx])
+    if tickets.empty:
+        raise RuntimeError("No tickets found. Run src.data_generation first.")
+    if preds.empty:
+        raise RuntimeError("No predictions found. Run src.inference_service first.")
 
-    # Priority prediction + confidence
-    pri_proba = _priority_model.predict_proba([text])[0]
-    pri_classes = list(_priority_model.classes_)
-    pri_idx = int(pri_proba.argmax())
-    pred_priority = pri_classes[pri_idx]
-    pri_conf = float(pri_proba[pri_idx])
-
-    # Single confidence score (simple + explainable)
-    confidence = float((cat_conf + pri_conf) / 2.0)
-
-    return {
-        "pred_category": pred_category,
-        "pred_priority": pred_priority,
-        "confidence": confidence,
-        "category_confidence": cat_conf,
-        "priority_confidence": pri_conf,
-    }
-
-
-def classify_ticket(ticket_id: str, text: str) -> Dict[str, Any]:
-    """
-    Predict, publish an event, and store results in Postgres.
-    """
-    result = predict_text(text)
-
-    event_payload = {
-        "event": "TICKET_CLASSIFIED",
-        "ticket_id": ticket_id,
-        "category": result["pred_category"],
-        "priority": result["pred_priority"],
-        "confidence": round(result["confidence"], 6),
-        "processed_at": datetime.now(timezone.utc).isoformat(),
-    }
-
-    # 1) Publish to in-memory queue (simulation)
-    # BUS.publish(event_payload)
-
-    # 2) Store in Postgres for persistence
-    insert_prediction(
-        ticket_id=ticket_id,
-        pred_category=result["pred_category"],
-        pred_priority=result["pred_priority"],
-        confidence=result["confidence"],
+    df = preds.merge(
+        tickets[["ticket_id", "true_category", "true_priority", "created_at"]],
+        on="ticket_id",
+        how="left"
     )
 
-    if result["pred_priority"] == "High":
-        BUS.publish(event_payload)
-        insert_event(event_type="TICKET_CLASSIFIED", payload=event_payload)
+    # Clean and parse timestamps
+    df["created_at"] = pd.to_datetime(df["created_at"], utc=True, errors="coerce")
+    df["processed_at"] = pd.to_datetime(df["processed_at"], utc=True, errors="coerce")
+    df["confidence"] = pd.to_numeric(df["confidence"], errors="coerce")
 
-    # insert_event(event_type="TICKET_CLASSIFIED", payload=event_payload)
+    # Minimal hygiene
+    df = df.dropna(subset=["true_category", "pred_category", "created_at", "confidence"])
+    return df
 
-    return event_payload
 
-
-def batch_classify_from_db(limit: int = 200, seed: int = 42) -> str:
-    """
-    Batch inference for pipeline/testing:
-    - reads tickets from DB
-    - classifies a sample
-    - writes outputs/predictions.csv
-    - drains event bus and writes outputs/events.log
-    """
-    # rows = fetch_all_tickets()
-    rows = fetch_unclassified_tickets(limit=limit)
-
-    if not rows:
-        raise RuntimeError("No tickets found. Run data_generation first.")
-
-    df = pd.DataFrame(rows)
-
-    # Sample (so we don't predict everything every time)
-    df = df.sample(n=min(limit, len(df)), random_state=seed).reset_index(drop=True)
-
+def compute_monitoring() -> Dict[str, Any]:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    preds_out: List[Dict[str, Any]] = []
+    df = _load_joined_data()
 
-    for _, row in df.iterrows():
-        ticket_id = str(row["ticket_id"])
-        text = str(row["text"])
+    # -----------------------------
+    # 1) Core classification metrics (Category)
+    # -----------------------------
+    y_true = df["true_category"].astype(str)
+    y_pred = df["pred_category"].astype(str)
 
-        event = classify_ticket(ticket_id, text)
+    acc = float(accuracy_score(y_true, y_pred))
 
-        preds_out.append(
-            {
-                "ticket_id": ticket_id,
-                "text": text,
-                "true_category": row["true_category"],
-                "true_priority": row["true_priority"],
-                "pred_category": event["category"],
-                "pred_priority": event["priority"],
-                "confidence": event["confidence"],
-                "created_at": str(row["created_at"]),
-                "processed_at": event["processed_at"],
-            }
-        )
+    precision_macro, recall_macro, f1_macro, _ = precision_recall_fscore_support(
+        y_true, y_pred, average="macro", zero_division=0
+    )
 
-    pred_df = pd.DataFrame(preds_out).sort_values("created_at")
-    pred_df.to_csv(PREDICTIONS_CSV_PATH, index=False)
+    # Useful report for write-up (per class)
+    report = classification_report(y_true, y_pred, output_dict=True, zero_division=0)
 
-    # Drain queue and write event log (so you show consume side)
-    drained = BUS.consume(max_events=10_000)
-    with open(EVENTS_LOG_PATH, "w", encoding="utf-8") as f:
-        for evt in drained:
-            f.write(f"{evt}\n")
+    # Confusion matrix
+    labels = sorted(list(set(y_true) | set(y_pred)))
+    cm = confusion_matrix(y_true, y_pred, labels=labels)
+    cm_df = pd.DataFrame(cm, index=[f"true_{l}" for l in labels], columns=[f"pred_{l}" for l in labels])
+    cm_df.to_csv(CONFUSION_MATRIX_CSV_PATH, index=True)
 
-    print(f"[OK] Wrote predictions -> {PREDICTIONS_CSV_PATH} ({len(pred_df)} rows)")
-    print(f"[OK] Wrote events log -> {EVENTS_LOG_PATH} ({len(drained)} events)")
-    return PREDICTIONS_CSV_PATH
+    # -----------------------------
+    # 2) High-priority tickets per day (Predicted)
+    # -----------------------------
+    df["day"] = df["created_at"].dt.date.astype(str)
+    high_per_day = (
+        df[df["pred_priority"].astype(str) == "High"]
+        .groupby("day")["ticket_id"]
+        .count()
+        .reset_index()
+        .rename(columns={"ticket_id": "high_priority_count"})
+        .sort_values("day")
+    )
+    high_per_day.to_csv(HIGH_PRIORITY_PER_DAY_CSV_PATH, index=False)
+
+    # -----------------------------
+    # 3) Drift check (simple): avg confidence over time (per day)
+    # -----------------------------
+    drift = (
+        df.groupby("day")["confidence"]
+        .mean()
+        .reset_index()
+        .rename(columns={"confidence": "avg_confidence"})
+        .sort_values("day")
+    )
+    drift.to_csv(DRIFT_CSV_PATH, index=False)
+
+    avg_conf_overall = float(df["confidence"].mean())
+
+    # -----------------------------
+    # 4) Store summary metrics in DB
+    # -----------------------------
+    insert_metrics(
+        category_accuracy=acc,
+        precision_macro=float(precision_macro),
+        recall_macro=float(recall_macro),
+        f1_macro=float(f1_macro),
+        avg_confidence=avg_conf_overall
+    )
+
+    # -----------------------------
+    # 5) Write metrics.json for submission
+    # -----------------------------
+    metrics_out = {
+        "n_predictions": int(len(df)),
+        "category_accuracy": acc,
+        "precision_macro": float(precision_macro),
+        "recall_macro": float(recall_macro),
+        "f1_macro": float(f1_macro),
+        "avg_confidence": avg_conf_overall,
+        "labels": labels,
+        "category_classification_report": report,
+        "artifacts": {
+            "metrics_json": METRICS_JSON_PATH,
+            "confusion_matrix_csv": CONFUSION_MATRIX_CSV_PATH,
+            "high_priority_per_day_csv": HIGH_PRIORITY_PER_DAY_CSV_PATH,
+            "drift_csv": DRIFT_CSV_PATH,
+        }
+    }
+
+    with open(METRICS_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(metrics_out, f, indent=2)
+
+    print(f"[OK] Metrics written -> {METRICS_JSON_PATH}")
+    print(f"[OK] Confusion matrix -> {CONFUSION_MATRIX_CSV_PATH}")
+    print(f"[OK] High priority per day -> {HIGH_PRIORITY_PER_DAY_CSV_PATH}")
+    print(f"[OK] Drift confidence -> {DRIFT_CSV_PATH}")
+    print(f"[Summary] Category Accuracy={acc:.4f}, F1(macro)={f1_macro:.4f}, AvgConf={avg_conf_overall:.4f}")
+
+    return metrics_out
 
 
 if __name__ == "__main__":
-    # Run a batch inference run (for testing)
-    batch_classify_from_db(limit=200, seed=2)
+    compute_monitoring()

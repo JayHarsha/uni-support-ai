@@ -1,5 +1,3 @@
-# Watashi
-
 import json
 import queue
 from typing import Any, Dict, List, Optional

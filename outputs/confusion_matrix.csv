@@ -1,6 +1,6 @@
 ,pred_Exams,pred_Fees,pred_General,pred_IT,pred_Timetable
-true_Exams,28,0,0,0,0
-true_Fees,0,41,1,1,0
-true_General,3,0,35,0,2
-true_IT,0,2,3,48,0
-true_Timetable,3,0,0,1,32
+true_Exams,26,0,0,0,0
+true_Fees,0,32,2,2,0
+true_General,2,0,34,0,2
+true_IT,0,2,4,50,0
+true_Timetable,0,0,0,2,42
