@@ -122,7 +122,7 @@ Event Simulation:
 - Python Queue
 - Database Event Logging
 
----
+```
 
 # 📂 Project Structure
 
@@ -158,7 +158,7 @@ uni-support-ai/
 │
 └── README.md
 
----
+```
 
 # 🚀 How To Run (Fully Dockerized)
 
