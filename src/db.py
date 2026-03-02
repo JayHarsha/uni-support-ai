@@ -1,5 +1,3 @@
-# Watashi
-
 import psycopg2
 from psycopg2.extras import RealDictCursor, Json
 from contextlib import contextmanager
@@ -48,6 +46,9 @@ def get_cursor():
 # --------------------------------------------------
 
 def insert_ticket(ticket_id, text, true_category, true_priority, created_at):
+    """
+    Used by Data Generation script (Synthetic data).
+    """
     with get_cursor() as cur:
         cur.execute(
             """
@@ -59,26 +60,60 @@ def insert_ticket(ticket_id, text, true_category, true_priority, created_at):
             (ticket_id, text, true_category, true_priority, created_at),
         )
 
-def insert_incoming_ticket(ticket_id, text, created_at):
+
+def insert_incoming_ticket(ticket_id, text, created_at, student_id="Anonymous", priority="Low"):
     """
-    Insert a real incoming ticket (no true labels available).
-    We store true_category/true_priority as 'Unknown'.
+    Used by API /submit endpoint.
     """
     with get_cursor() as cur:
         cur.execute(
             """
             INSERT INTO public.tickets
-            (ticket_id, text, true_category, true_priority, created_at)
-            VALUES (%s, %s, %s, %s, %s)
+            (ticket_id, student_id, text, true_category, true_priority, requested_priority, status, created_at)
+            VALUES (%s, %s, %s, 'Unknown', 'Unknown', %s, 'QUEUED', %s)
             ON CONFLICT (ticket_id) DO NOTHING;
             """,
-            (ticket_id, text, "Unknown", "Unknown", created_at),
+            (ticket_id, student_id, text, priority, created_at),
         )
+
 
 def fetch_all_tickets():
     with get_cursor() as cur:
         cur.execute("SELECT * FROM public.tickets;")
         return cur.fetchall()
+
+
+def fetch_tickets_by_student(student_id):
+    """
+    Lab Req: Get history for a specific student.
+    """
+    with get_cursor() as cur:
+        cur.execute(
+            "SELECT * FROM public.tickets WHERE student_id = %s ORDER BY created_at DESC;",
+            (student_id,)
+        )
+        return cur.fetchall()
+
+
+def update_ticket_status(ticket_id, status, resolved_at=None, note=None):
+    """
+    Used by Worker to update status (PROCESSING -> RESOLVED).
+    """
+    with get_cursor() as cur:
+        if resolved_at:
+            cur.execute(
+                """
+                UPDATE public.tickets 
+                SET status = %s, resolved_at = %s, resolution_note = %s 
+                WHERE ticket_id = %s;
+                """,
+                (status, resolved_at, note, ticket_id)
+            )
+        else:
+            cur.execute(
+                "UPDATE public.tickets SET status = %s WHERE ticket_id = %s;",
+                (status, ticket_id)
+            )
 
 
 # --------------------------------------------------
@@ -142,7 +177,6 @@ def fetch_unclassified_tickets(limit=200):
     Fetch tickets not yet classified.
     """
     limit = int(limit)
-
     with get_cursor() as cur:
         cur.execute(
             f"""
@@ -156,6 +190,3 @@ def fetch_unclassified_tickets(limit=200):
             """
         )
         return cur.fetchall()
-
-
-

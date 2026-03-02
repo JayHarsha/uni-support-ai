@@ -4,7 +4,6 @@ SET search_path TO public;
 
 -- ===============================
 -- Drop tables if they exist
--- (development reset)
 -- ===============================
 DROP TABLE IF EXISTS public.metrics;
 DROP TABLE IF EXISTS public.events;
@@ -15,11 +14,16 @@ DROP TABLE IF EXISTS public.tickets;
 -- 1) Tickets Table
 -- ===============================
 CREATE TABLE public.tickets (
-    ticket_id VARCHAR(20) PRIMARY KEY,
+    ticket_id VARCHAR(50) PRIMARY KEY,
+    student_id VARCHAR(50) DEFAULT 'Anonymous',
     text TEXT NOT NULL,
-    true_category VARCHAR(50) NOT NULL,
-    true_priority VARCHAR(20) NOT NULL,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    true_category VARCHAR(50) DEFAULT 'Unknown',
+    true_priority VARCHAR(20) DEFAULT 'Unknown',
+    requested_priority VARCHAR(20) DEFAULT 'Low', -- NEW COLUMN for user-requested priority
+    status VARCHAR(20) DEFAULT 'QUEUED', 
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    resolved_at TIMESTAMP WITH TIME ZONE,
+    resolution_note TEXT
 );
 
 -- ===============================
@@ -27,7 +31,8 @@ CREATE TABLE public.tickets (
 -- ===============================
 CREATE TABLE public.predictions (
     id SERIAL PRIMARY KEY,
-    ticket_id VARCHAR(20) REFERENCES public.tickets(ticket_id) ON DELETE CASCADE,
+    -- FIXED: Changed from VARCHAR(20) to VARCHAR(50) to match tickets table
+    ticket_id VARCHAR(50) REFERENCES public.tickets(ticket_id) ON DELETE CASCADE,
     pred_category VARCHAR(50) NOT NULL,
     pred_priority VARCHAR(20) NOT NULL,
     confidence DOUBLE PRECISION NOT NULL,
@@ -61,5 +66,6 @@ CREATE TABLE public.metrics (
 -- Helpful Indexes
 -- ===============================
 CREATE INDEX IF NOT EXISTS idx_tickets_created_at ON public.tickets(created_at);
+CREATE INDEX IF NOT EXISTS idx_tickets_student_id ON public.tickets(student_id);
 CREATE INDEX IF NOT EXISTS idx_predictions_ticket_id ON public.predictions(ticket_id);
 CREATE INDEX IF NOT EXISTS idx_events_created_at ON public.events(created_at);

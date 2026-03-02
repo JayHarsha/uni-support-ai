@@ -28,6 +28,7 @@ services:
       DB_USER: postgres
       DB_PASSWORD: "@Qwerty7"
       OUTPUT_DIR: outputs
+      MONOLITHIC_MODE: "false"  # Set this to "true" to run in monolithic mode
     ports:
       - "8000:8000"
     volumes:

@@ -78,7 +78,7 @@ def assign_priority(text: str) -> str:
         return "High"
 
     # Medium if error/failure keywords
-    if any(w in t for w in ["failed", "error", "declined", "not working", "timeout", "can't access"]):
+    if any(w in t for w in ["failed", "error", "declined", "not working", "timeout", "can't access", "connot access"]):
         return "Medium"
 
     return "Low"
